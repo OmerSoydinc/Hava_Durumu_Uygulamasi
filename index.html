@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAVA DURUMU</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <div class="genel">
+        <header><i class="bx bx-left-arrow-alt"></i> Hava Durumu Uygulaması</header>
+        <section class="giris-kismi">
+            <p class="bilgi"></p>
+            <input type="text" placeholder="şehir" spellcheck="false" required>
+            <div class="ayirici"></div>
+            <button>Konumu Belirle</button>
+        </section>
+        
+<!--Ayrıntı Kısmı-->
+
+
+        <section class="hava-durumu">
+            <img src="#" alt="Weather Icon"> 
+            <div class="sicaklik">
+                <span class="numb"></span>
+                <span class="derece">°</span>C
+            </div>
+            <div class="hava">_ _</div>
+            <div class="lokasyon">
+                <i class="bx bx-map"></i>
+                <span>_, _</span>
+            </div>
+            <div class="alt-detaylar">
+                <div class="column hissedilen">  
+                    <i class="bx bxs-thermometer"></i>
+                    <div class="detaylar">
+                        <div class="sicaklik">
+                            <span class="numb-2"></span>
+                            <span class="derece">°</span>C
+                        </div>
+                        <p>Hissedilen Sıcaklık </p>
+                    </div>
+                </div>
+                <div class="column nem">
+                    <i class="bx bxs-droplet-half"></i>
+                    <div class="detaylar">
+                        <span>_</span>
+                        <p>Nem Oranı</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

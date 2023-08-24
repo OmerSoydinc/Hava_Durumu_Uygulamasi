@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image:url("icons/arkaPlan.jpg");
+}
+.genel{
+    width: 350px;
+    border-radius: 7px;
+    background: #fff;
+    opacity: 00.9;
+}
+
+
+
+
+
+
+
+
+
+.genel header{
+    color: #43affc;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #43affc;
+}
+header i {
+    cursor: pointer;
+    font-size: 0px;
+    margin-right: 6px;
+}
+.genel.active header i{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+.genel .giris-kismi{
+    margin: 20px 25px 30px;
+}
+.genel.active .giris-kismi{
+    display: none;
+}
+.giris-kismi .bilgi{
+    display: none;
+    font-size: 15px;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+.bilgi.error{  /* yanlış girildiği zamanki hata mesajı için */
+    display: block;
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+.bilgi.pending{  /* doğru girildiği zamanki mesaj için */
+    display: block;
+    color: #0c5460;
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+}
+
+
+
+
+
+
+.giris-kismi :where(input, button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+}
+.giris-kismi input{
+    text-align: center;
+    border: 1px solid #bfbfbf;
+}
+.giris-kismi input:is(:focus, :valid){
+    border: 2px solid #43affc;
+}
+.giris-kismi .ayirici{
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ayirici::before{
+    content: 'veya';
+    background-color: #fff;
+    color: #ccc;
+    padding: 0 15px;
+    font-size: 15px;
+}
+.giris-kismi button{
+    color: #fff;
+    background-color: #43affc;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* HAVA PART Bölümü*/
+
+.genel .hava-durumu{
+    margin: 30px 0 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.genel.active .hava-durumu{
+    display: flex;
+}
+.hava-durumu img{
+    max-width: 150px;
+}
+.hava-durumu .sicaklik{
+    display: flex;
+    font-size: 72px;
+    font-weight: 500;
+}
+.hava-durumu .sicaklik .numb{
+    font-weight: 600;
+}
+.hava-durumu .sicaklik .derece{
+    font-size: 40px;
+    margin: 10px 5px  0 0;
+    display: block;
+}
+
+
+
+
+.hava-durumu .lokasyon{
+    display: flex;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.lokasyon i{
+    font-size: 22px;
+    margin-right: 5px;
+}
+.hava-durumu .alt-detaylar{
+    width: 97%;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #43affc;
+    justify-content:space-between;
+}
+.alt-detaylar .column{
+    width: 100%;
+    display: flex;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+.column i{
+    font-size: 20px;
+    color: #43affc;
+}
+.column.nem{ 
+    border-left: 2px solid #43affc;
+    margin:3px;
+    margin-left: 15px;
+    align-items: center;
+}
+.detaylar .sicaklik, .nem span{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -4px;
+}
+.detaylar .sicaklik .derece{
+    margin: 0;
+    font-size: 17px;
+    padding: 0 2px 0 1px;
+}
+.detaylar p{
+    font-size: 15px;
+    margin-top: -1px;
+}
